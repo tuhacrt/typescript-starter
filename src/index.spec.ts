@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 
-import complexArray from './index';
+import { complexArray } from './index';
 
 describe('ts-reset/filter', () => {
   test(`
