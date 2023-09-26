@@ -13,7 +13,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4
 
       - name: Install bun
         uses: oven-sh/setup-bun@v1
@@ -24,6 +24,20 @@ jobs:
       - name: Lint
         run: bun lint
 
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install
+        run: bun i
+
+      - name: Typecheck
+        run: bun typecheck
+
   test:
     runs-on: ${{ matrix.os }}
 
@@ -33,7 +47,7 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4
 
       - name: Install bun
         uses: oven-sh/setup-bun@v1
