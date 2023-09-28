@@ -9,7 +9,6 @@ export default antfu(
   {
     plugins: { ts },
     rules: {
-      'antfu/top-level-function': 'off',
       'antfu/if-newline': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'style/curly': 'off',
