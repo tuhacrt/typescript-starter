@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "composite": true,
     "target": "esnext",
     "lib": ["esnext"],
     "jsx": "react-jsx",
@@ -11,6 +12,8 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "noEmit": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

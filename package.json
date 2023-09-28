@@ -8,16 +8,14 @@
   "keywords": [],
   "sideEffects": false,
   "module": "./index.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build:dev": "bun build --target=bun ./src/index.ts --outdir=dist --outfile=index.js",
-    "start": "bun run ./src/index.ts",
     "dev": "bun run --hot ./src/index.ts",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "start": "bun run ./src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "fp-ts": "^2.16.1",
