@@ -24,11 +24,11 @@
     "ts-pattern": "^5.0.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "v1.0.0-beta.10",
+    "@antfu/eslint-config": "v1.0.0-beta.13",
     "@total-typescript/ts-reset": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "bun-types": "^1.0.1",
-    "eslint": "^8.48.0",
+    "bun-types": "^1.0.3",
+    "eslint": "^8.50.0",
     "eslint-define-config": "^1.23.0",
     "lint-staged": "^14.0.1",
     "simple-git-hooks": "^2.9.0",
