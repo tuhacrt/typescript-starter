@@ -4,14 +4,10 @@ import ts from '@typescript-eslint/eslint-plugin';
 export default antfu(
   {
     vue: false,
-    ignores: [
-      // eslint ignore globs here
-    ],
+    ignores: ['node_modules', 'dist'],
   },
   {
-    plugins: {
-      ts,
-    },
+    plugins: { ts },
     rules: {
       'antfu/top-level-function': 'off',
       'antfu/if-newline': 'off',
