@@ -1,13 +1,8 @@
 import antfu from '@antfu/eslint-config';
-import ts from '@typescript-eslint/eslint-plugin';
 
 export default antfu(
+  { vue: false, ignores: ['node_modules', 'dist'] },
   {
-    vue: false,
-    ignores: ['node_modules', 'dist'],
-  },
-  {
-    plugins: { ts },
     rules: {
       'antfu/if-newline': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
@@ -17,15 +12,7 @@ export default antfu(
       'import/order': [
         'error',
         {
-          'groups': [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-            'unknown',
-          ],
+          'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'unknown'],
           'newlines-between': 'always',
           'alphabetize': { order: 'asc' },
         },
