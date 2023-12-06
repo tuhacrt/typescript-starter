@@ -21,9 +21,9 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.2.2",
+    "@antfu/eslint-config": "^2.3.4",
     "@total-typescript/ts-reset": "^0.5.1",
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
     "bun-types": "^1.0.15",
     "eslint": "^8.55.0",
     "eslint-define-config": "^2.0.0",
