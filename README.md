@@ -1,6 +1,6 @@
 # TypeScript-Starter
 
-A general TypeScript-Starter using : "bun"
+A general TypeScript-Starter using : "nodejs", "pnpm", "vitest"
 
 ## License
 
