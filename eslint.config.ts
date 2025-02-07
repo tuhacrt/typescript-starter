@@ -20,7 +20,6 @@ export default antfu(
       'node/no-path-concat': 'error',
       'node/process-exit-as-throw': 'error',
       'object-shorthand': ['error', 'properties'],
-      // 'perfectionist/sort-classes': ['error', { order: 'asc' }],
       'style/brace-style': ['error', '1tbs'],
       'style/no-extra-semi': 'error',
       'style/padding-line-between-statements': [
@@ -28,11 +27,7 @@ export default antfu(
         { blankLine: 'always', next: 'return', prev: '*' },
         { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
         { blankLine: 'always', next: ['const', 'let', 'var'], prev: '*' },
-        {
-          blankLine: 'any',
-          next: ['const', 'let', 'var'],
-          prev: ['const', 'let', 'var'],
-        },
+        { blankLine: 'any', next: ['const', 'let', 'var'], prev: ['const', 'let', 'var'] },
         { blankLine: 'always', next: '*', prev: 'if' },
         { blankLine: 'always', next: 'if', prev: '*' },
       ],
