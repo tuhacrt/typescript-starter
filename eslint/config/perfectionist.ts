@@ -3,16 +3,17 @@
  * 2. natural
  * 3. line-length
  */
-const TYPE = 'natural'
+export const TYPE = 'natural'
 
 // 1. asc, 2. desc
-const ORDER = 'asc'
+export const ORDER = 'asc'
+
 const DEFAULT_CONFIG = { order: ORDER, type: TYPE }
 
 /**
  * Those commented out rules are much stricter.
  */
-const RULES = {
+export const RULES = {
   'perfectionist/sort-array-includes': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-classes': ['error', DEFAULT_CONFIG], // very strict
   'perfectionist/sort-decorators': ['error', DEFAULT_CONFIG],
@@ -35,4 +36,4 @@ const RULES = {
   // 'perfectionist/sort-variable-declarations': ['error', DEFAULT_CONFIG], // default disabled
 } as any
 
-export { ORDER, RULES, TYPE }
+

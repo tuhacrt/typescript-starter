@@ -1,4 +1,4 @@
-const RULES = {
+export const RULES = {
   'unicorn/better-regex': 'error',
   'unicorn/catch-error-name': 'error', // very strict
   'unicorn/consistent-assert': 'error',
@@ -40,4 +40,4 @@ const RULES = {
   'unicorn/throw-new-error': 'error',
 } as const
 
-export { RULES }
+
