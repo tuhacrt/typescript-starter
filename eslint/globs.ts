@@ -26,8 +26,6 @@ const GLOB_TESTS = [
   `**/*.test.${GLOB_SRC_EXT}`,
 ]
 
-
-
 const IGNORES = [
   '**/node_modules/**/*',
   '**/dist/**/*',

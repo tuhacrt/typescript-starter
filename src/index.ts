@@ -1,22 +1,23 @@
-/* eslint-disable ts/no-unused-vars, unicorn/consistent-function-scoping*/
+import { getStylisticRules } from '../eslint/config/stylistic'
+
 export const complexArray = [1, 2, 3, undefined]
 
-type A = {
-  [key: string]: string;
-  a: string; [ 'basg']: string; }
+export type A = {
+  [key: string]: string
+  a: string
+  ['basg']: string
+}
 
-const test = {
+export const test = {
   ['basdfs']: 1,
 }
 
-export function a(b, c ) {
+export const test2 = undefined
+
+export function a(b: any, c: any) {
   if (c) {
     console.log(c)
   }
-
-
-  b => foo => foo
-  console
 
   if (b) {
     console.log(b)
@@ -24,19 +25,11 @@ export function a(b, c ) {
     console.log(c)
   }
 
-  const foo = 1, bar = 2;
+  // const foo = 1, bar = 2
 
-  const d = [
-    1,
-    2,
-    3,
-  ]
-
-  a
-  => {
-    return ''
-  }
+  // const d = [1, 2, 3]
 }
 
+a(1, 2)
 
-a( 1, 2 )
+console.log(JSON.stringify((await getStylisticRules({})).rules))

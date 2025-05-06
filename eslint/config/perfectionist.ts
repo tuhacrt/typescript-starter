@@ -35,5 +35,3 @@ export const RULES = {
   'perfectionist/sort-union-types': ['error', DEFAULT_CONFIG],
   // 'perfectionist/sort-variable-declarations': ['error', DEFAULT_CONFIG], // default disabled
 } as any
-
-

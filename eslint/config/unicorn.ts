@@ -39,5 +39,3 @@ export const RULES = {
   'unicorn/prefer-type-error': 'error',
   'unicorn/throw-new-error': 'error',
 } as const
-
-
