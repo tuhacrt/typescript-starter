@@ -1,11 +1,36 @@
-const RULES = {
+export const RULES = {
+  'unicorn/better-regex': 'error',
+  'unicorn/catch-error-name': 'error', // very strict
+  'unicorn/consistent-assert': 'error',
+  'unicorn/consistent-destructuring': 'error',
+  'unicorn/consistent-empty-array-spread': 'error',
+  'unicorn/consistent-existence-index-check': 'error',
+  'unicorn/consistent-function-scoping': 'error',
   'unicorn/custom-error-definition': 'error',
+  'unicorn/empty-brace-spaces': 'error',
   'unicorn/error-message': 'error',
   'unicorn/escape-case': 'error',
+  'unicorn/filename-case': ['error', { case: 'camelCase', ignore: ['README.md'] }],
+  'unicorn/no-abusive-eslint-disable': 'error',
+  'unicorn/no-accessor-recursion': 'error',
+  'unicorn/no-anonymous-default-export': 'error',
+  'unicorn/no-array-callback-reference': 'error',
+  'unicorn/no-array-for-each': 'error',
+  'unicorn/no-array-method-this-argument': 'error',
+  'unicorn/no-await-in-promise-methods': 'error',
+  'unicorn/no-document-cookie': 'error',
+  'unicorn/no-empty-file': 'error',
+  'unicorn/no-for-loop': 'error',
+  'unicorn/no-hex-escape': 'error',
   'unicorn/no-instanceof-array': 'error',
+  'unicorn/no-invalid-fetch-options': 'error',
+  'unicorn/no-invalid-remove-event-listener': 'error',
+  'unicorn/no-magic-array-flat-depth': 'error',
+  'unicorn/no-negated-condition': 'error',
   'unicorn/no-new-array': 'error',
   'unicorn/no-new-buffer': 'error',
-  // 'unicorn/number-literal-case': 'error',
+  'unicorn/no-null': 'error', // continue here
+  // 'unicorn/number-literal-case': 'error', // very strict
   'unicorn/prefer-dom-node-text-content': 'error',
   'unicorn/prefer-includes': 'error',
   'unicorn/prefer-node-protocol': 'off',
@@ -14,7 +39,3 @@ const RULES = {
   'unicorn/prefer-type-error': 'error',
   'unicorn/throw-new-error': 'error',
 } as const
-
-export {
-  RULES,
-}

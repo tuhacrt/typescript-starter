@@ -27,8 +27,8 @@ const GLOB_TESTS = [
 ]
 
 const IGNORES = [
-  'node_modules',
-  'dist',
+  '**/node_modules/**/*',
+  '**/dist/**/*',
 ]
 
 function addPrefix(prefix: string, globs: Array<string> | string): Array<string> {
