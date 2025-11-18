@@ -36,7 +36,7 @@ const opinionatedRules = {
   ],
 } as Partial<Linter.RulesRecord>
 
-export async function getStylisticRules({ files = ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], overrides = {} }: StylisticCustomizeOptions): Promise<Linter.Config<Linter.RulesRecord>> {
+export async function getStylisticRules({ files = ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], overrides = {} }: StylisticCustomizeOptions = {}): Promise<Linter.Config<Linter.RulesRecord>> {
   const pluginStylistic = await interopDefault(import('@stylistic/eslint-plugin'))
   const config = pluginStylistic.configs.customize({ pluginName: 'style' })
 
