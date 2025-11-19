@@ -8,16 +8,22 @@
   "license": "MIT",
   "keywords": [],
   "sideEffects": false,
-  "module": "./src/index.ts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
-    "lint": "eslint .",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "start": "tsx src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
@@ -32,7 +38,6 @@
     "@types/node": "^24.10.1",
     "bumpp": "^10.3.1",
     "eslint": "^9.39.1",
-    "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-perfectionist": "^4.15.1",
@@ -42,10 +47,10 @@
     "lint-staged": "^16.2.6",
     "rimraf": "^6.1.0",
     "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.16.5",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.47.0",
-    "unbuild": "^3.6.1",
     "vitest": "^4.0.10"
   },
   "simple-git-hooks": {

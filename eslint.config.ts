@@ -3,7 +3,6 @@ import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import style from '@stylistic/eslint-plugin'
 import { defineConfig } from 'eslint/config'
-import format from 'eslint-plugin-format'
 import pluginImport from 'eslint-plugin-import-x'
 import n from 'eslint-plugin-n'
 import perfectionist from 'eslint-plugin-perfectionist'
@@ -21,7 +20,6 @@ export default (defineConfig as any)([
   { ignores: IGNORES },
   {
     plugins: {
-      format,
       import: pluginImport,
       node: n,
       perfectionist,
