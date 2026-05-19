@@ -21,18 +21,12 @@ const GLOB_YAML = '**/*.y?(a)ml'
 const GLOB_XML = '**/*.xml'
 const GLOB_HTML = '**/*.htm?(l)'
 
-const GLOB_TESTS = [
-  `**/*.spec.${GLOB_SRC_EXT}`,
-  `**/*.test.${GLOB_SRC_EXT}`,
-]
+const GLOB_TESTS = [`**/*.spec.${GLOB_SRC_EXT}`, `**/*.test.${GLOB_SRC_EXT}`]
 
-const IGNORES = [
-  '**/node_modules/**/*',
-  '**/dist/**/*',
-]
+const IGNORES = ['**/node_modules/**/*', '**/dist/**/*']
 
-function addPrefix(prefix: string, globs: Array<string> | string): Array<string> {
-  return (Array.isArray(globs) ? globs : [globs]).map(glob => `${prefix}/${glob}`)
+function addPrefix(prefix: string, globs: string | string[]): string[] {
+  return (Array.isArray(globs) ? globs : [globs]).map((glob) => `${prefix}/${glob}`)
 }
 
 export {

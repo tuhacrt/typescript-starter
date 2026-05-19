@@ -8,12 +8,12 @@ export const TYPE = 'natural'
 // 1. asc, 2. desc
 export const ORDER = 'asc'
 
-const DEFAULT_CONFIG = { order: ORDER, type: TYPE }
+const DEFAULT_CONFIG = { order: ORDER, type: TYPE } as const
 
 /**
  * Those commented out rules are much stricter.
  */
-export const RULES = {
+export const RULES: Record<string, ['error', typeof DEFAULT_CONFIG]> = {
   'perfectionist/sort-array-includes': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-classes': ['error', DEFAULT_CONFIG], // very strict
   'perfectionist/sort-decorators': ['error', DEFAULT_CONFIG],
@@ -26,12 +26,12 @@ export const RULES = {
   'perfectionist/sort-jsx-props': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-maps': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-modules': ['error', DEFAULT_CONFIG], // very strict
-  'perfectionist/sort-named-exports': ['error', DEFAULT_CONFIG],
-  'perfectionist/sort-named-imports': ['error', DEFAULT_CONFIG],
+  // 'perfectionist/sort-named-exports': ['error', DEFAULT_CONFIG],
+  // 'perfectionist/sort-named-imports': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-object-types': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-objects': ['error', DEFAULT_CONFIG],
   'perfectionist/sort-sets': ['error', DEFAULT_CONFIG],
   // 'perfectionist/sort-switch-case': ['error', DEFAULT_CONFIG], // default disabled
   'perfectionist/sort-union-types': ['error', DEFAULT_CONFIG],
   // 'perfectionist/sort-variable-declarations': ['error', DEFAULT_CONFIG], // default disabled
-} as any
+} as const

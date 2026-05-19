@@ -1,0 +1,27 @@
+# Refer for explanation to following link:
+# https://lefthook.dev/configuration/
+pre-commit:
+  parallel: true
+  jobs:
+    # use piped group job for lint & format to ensure consistant result
+    - name: lint & format
+      glob: "*.{js,ts,jsx,tsx}"
+      group:
+        piped: true
+        jobs:
+          - name: oxlint
+            run: ./node_modules/.bin/oxlint --fix {staged_files}
+            stage_fixed: true
+          - name: oxfmt
+            run: ./node_modules/.bin/oxfmt {staged_files}
+            stage_fixed: true
+
+    - name: type check
+      glob: "*.{ts,tsx}"
+      group:
+        piped: true
+        jobs:
+          - name: create precommit tsconfig
+            run: node ./tools/create-precommit-tsconfig.js {staged_files}
+          - name: tsc
+            run: ./node_modules/.bin/tsc --noEmit --project tsconfig.precommit.json
