@@ -3,13 +3,3 @@ allowBuilds:
   lefthook: true
 ignoredBuiltDependencies:
   - esbuild
-minimumReleaseAgeExclude:
-  - '@oxlint-tsgolint/darwin-arm64@0.23.0'
-  - '@oxlint-tsgolint/darwin-x64@0.23.0'
-  - '@oxlint-tsgolint/linux-arm64@0.23.0'
-  - '@oxlint-tsgolint/linux-x64@0.23.0'
-  - '@oxlint-tsgolint/win32-arm64@0.23.0'
-  - '@oxlint-tsgolint/win32-x64@0.23.0'
-  - '@types/node@25.9.0'
-  - oxlint-tsgolint@0.23.0
-  - tsx@4.22.2
