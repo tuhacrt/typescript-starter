@@ -3,3 +3,9 @@ allowBuilds:
   lefthook: true
 ignoredBuiltDependencies:
   - esbuild
+overrides:
+  baseline-browser-mapping: 2.10.40
+  electron-to-chromium: 1.5.384
+  picomatch: 4.0.4
+  tsx: 4.22.4
+  vite: 8.1.2
