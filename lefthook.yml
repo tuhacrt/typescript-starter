@@ -5,7 +5,7 @@ pre-commit:
   jobs:
     # use piped group job for lint & format to ensure consistant result
     - name: lint & format
-      glob: "*.{js,ts,jsx,tsx}"
+      glob: '*.{js,ts,jsx,tsx}'
       group:
         piped: true
         jobs:
@@ -17,7 +17,7 @@ pre-commit:
             stage_fixed: true
 
     - name: type check
-      glob: "*.{ts,tsx}"
+      glob: '*.{ts,tsx}'
       group:
         piped: true
         jobs:
